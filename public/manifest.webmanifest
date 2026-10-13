@@ -1,0 +1,10 @@
+{
+  "name": "Sasti Dawai",
+  "short_name": "Sasti Dawai",
+  "description": "Understand medicine packaging and explore verified lower-cost options.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7fcf8",
+  "theme_color": "#0d6b4d",
+  "icons": [{ "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

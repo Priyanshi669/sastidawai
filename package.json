@@ -1,0 +1,31 @@
+{
+  "name": "sasti-dawai-web",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "check": "tsc -b"
+  },
+  "dependencies": {
+    "@types/leaflet": "^1.9.22",
+    "@vitejs/plugin-react": "latest",
+    "framer-motion": "^14.1.1",
+    "i18next": "latest",
+    "leaflet": "^1.9.4",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-i18next": "latest",
+    "react-leaflet": "^5.0.0",
+    "react-router-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "latest"
+  }
+}
