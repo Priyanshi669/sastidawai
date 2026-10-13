@@ -1,0 +1,136 @@
+:root {
+  /* Professional healthcare palette */
+  --primary-900: #0b3d3a;
+  --primary-800: #0d5c57;
+  --primary-700: #0f7670;
+  --primary-600: #12918a;
+  --primary-500: #1ab3aa;
+  --primary-200: #b2e8e4;
+  --primary-100: #d9f4f1;
+  --primary-50: #edf9f8;
+
+  /* Neutral palette */
+  --gray-950: #1a1f1e;
+  --gray-900: #2d3332;
+  --gray-700: #4a5250;
+  --gray-500: #7a8280;
+  --gray-300: #c4cbc9;
+  --gray-200: #dde2e0;
+  --gray-100: #eef1f0;
+  --gray-50: #f7f9f8;
+
+  /* Semantic */
+  --success: #1a7f4e;
+  --success-bg: #e0f5e9;
+  --warning: #9a6a1a;
+  --warning-bg: #f5ecd4;
+  --danger: #b84040;
+  --danger-bg: #f5dcdc;
+  --info: #1a6fb8;
+  --info-bg: #dceef8;
+
+  /* Surfaces */
+  --surface: #ffffff;
+  --surface-raised: #ffffff;
+  --bg: #f4f7f6;
+  --border: #dde4e1;
+  --border-strong: #c4cdc9;
+
+  /* Glassmorphism - refined */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-strong: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-border-soft: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 2px 12px rgba(15, 60, 55, 0.06);
+  --glass-shadow-lg: 0 8px 32px rgba(15, 60, 55, 0.1);
+  --glass-blur: blur(20px) saturate(1.2);
+  --glass-blur-sm: blur(12px) saturate(1.1);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  --glass-gradient: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.3) 100%);
+  --glass-gradient-primary: linear-gradient(135deg, rgba(18, 145, 138, 0.08) 0%, rgba(255,255,255, 0.3) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 60, 55, 0.06);
+  --shadow-md: 0 4px 16px rgba(15, 60, 55, 0.08);
+  --shadow-lg: 0 12px 40px rgba(15, 60, 55, 0.12);
+
+  /* Modern radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --container: 1080px;
+
+  /* Typography */
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--gray-950);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Dark mode tokens ── */
+[data-theme="dark"] {
+  /* Brighter, more vibrant primary for dark backgrounds */
+  --primary-900: #0a3532;
+  --primary-800: #0d4a45;
+  --primary-700: #10635c;
+  --primary-600: #14a89e;
+  --primary-500: #2dd4c4;
+  --primary-200: #1a5c55;
+  --primary-100: #174a44;
+  --primary-50: #123a35;
+
+  /* Better neutral contrast */
+  --gray-950: #f0f4f3;
+  --gray-900: #d8dfdd;
+  --gray-700: #a8b2af;
+  --gray-500: #707a77;
+  --gray-300: #3d4744;
+  --gray-200: #2c3532;
+  --gray-100: #232c29;
+  --gray-50: #1a211e;
+
+  /* Surfaces with clear hierarchy */
+  --surface: #1c2522;
+  --surface-raised: #24302c;
+  --bg: #131917;
+  --border: #2c3835;
+  --border-strong: #3d4a46;
+
+  /* Semantic colors - brighter for dark mode */
+  --success: #34d399;
+  --success-bg: #0d2e1f;
+  --warning: #fbbf24;
+  --warning-bg: #2e2410;
+  --danger: #f87171;
+  --danger-bg: #2e1515;
+  --info: #60a5fa;
+  --info-bg: #0d1f30;
+
+  /* Glassmorphism - refined for dark */
+  --glass-bg: rgba(28, 37, 34, 0.75);
+  --glass-bg-strong: rgba(28, 37, 34, 0.88);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-border-soft: rgba(255, 255, 255, 0.04);
+  --glass-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  --glass-shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.4);
+  --glass-blur: blur(20px) saturate(1.15);
+  --glass-blur-sm: blur(12px) saturate(1.05);
+  --glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --glass-gradient: linear-gradient(135deg, rgba(36, 48, 44, 0.75) 0%, rgba(28, 37, 34, 0.45) 100%);
+  --glass-gradient-primary: linear-gradient(135deg, rgba(20, 168, 158, 0.15) 0%, rgba(36, 48, 44, 0.45) 100%);
+
+  /* Shadows with subtle glow */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 12px 48px rgba(0, 0, 0, 0.45);
+
+  background: var(--bg);
+  color: var(--gray-950);
+}
