@@ -1,12 +1,12 @@
 """API request and response schemas adhering to RFC 7807 problem details."""
 
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Union
 from pydantic import BaseModel, Field
 
 from ml.schemas.enums import ScanWorkflowState
 from ml.schemas.extraction import RawMedicineExtraction
-from ml.schemas.matcher import MANDATORY_DISCLAIMER
-from ml.schemas.quality import ImageQualityReport
+from ml.schemas.matcher import MANDATORY_DISCLAIMER, MatchResult
+from ml.schemas.quality import ImageQualityReport, MultiImageQualityReport
 
 
 class ScanResponse(BaseModel):
@@ -17,7 +17,7 @@ class ScanResponse(BaseModel):
         default=None,
         description="Structured extraction result; null if image rejected or perception failed."
     )
-    quality_report: Optional[ImageQualityReport] = Field(
+    quality_report: Optional[Union[MultiImageQualityReport, ImageQualityReport]] = Field(
         default=None,
         description="Pre-extraction image quality check report."
     )
@@ -40,6 +40,10 @@ class ScanResponse(BaseModel):
     model_version: str = Field(default="gemini-2.5-flash-v1")
     latency_ms: int = Field(..., ge=0)
     disclaimer: str = Field(default=MANDATORY_DISCLAIMER)
+    match_result: Optional[MatchResult] = Field(
+        default=None,
+        description="Deterministic catalogue matching result if workflow reached matching; null otherwise."
+    )
 
 
 class ProblemDetails(BaseModel):

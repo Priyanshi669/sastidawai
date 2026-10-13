@@ -29,6 +29,11 @@ from ml.schemas.quality import (
 )
 
 
+class ImageValidationError(ValueError):
+    """Raised when an uploaded image fails validation (corrupt, unsupported format, size limit)."""
+    pass
+
+
 class QualityThresholds(BaseModel):
     """Configurable thresholds for image ingestion and quality gates."""
     max_file_size_bytes: int = Field(default=1_572_864, description="Maximum single image size (1.5 MB).")
