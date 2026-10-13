@@ -221,3 +221,9 @@ __marimo__/
 
 # Guides
 *guide*
+
+# Frontend local env overrides
+.env.*
+!.env.example
+*.local
+node_modules/
